@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBaseState : MonoBehaviour
+public class EnemyBaseState
 {
-    // Start is called before the first frame update
-    void Start()
+    public string name;
+    protected EnemyStateMachine enemyStateMachine;
+
+    public EnemyBaseState(string name, EnemyStateMachine enemyStateMachine)
     {
-        
+        this.name = name;
+        this.enemyStateMachine = enemyStateMachine;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public virtual void Enter() { }
+    public virtual void UpdateLogic() { }
+    public virtual void UpdatePhysics() { }
+    public virtual void Exit() { }
 }
