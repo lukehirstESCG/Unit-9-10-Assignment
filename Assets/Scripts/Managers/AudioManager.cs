@@ -16,12 +16,13 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
+            return;
         }
+        DontDestroyOnLoad(gameObject);
 
         LoadVol();
 
