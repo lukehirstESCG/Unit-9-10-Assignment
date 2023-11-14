@@ -1537,6 +1537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419894699}
   - component: {fileID: 419894700}
+  - component: {fileID: 419894701}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1572,8 +1573,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1924445279}
-  pauseCog: {fileID: 0}
+  pauseCog: {fileID: 1036280008}
   isPaused: 0
+--- !u!114 &419894701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419894698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40a65e94fa04b849980630018653245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  master: {fileID: 24100000, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
+  musicSlider: {fileID: 650799166}
+  sfxSlider: {fileID: 332616420}
+  MusicVolText: {fileID: 812247352}
+  SFXVolText: {fileID: 316047759}
 --- !u!1 &456212421
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,7 +4795,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 103213923078665905}
-  - component: {fileID: 6853581686446448211}
   - component: {fileID: 4581286997987304672}
   m_Layer: 0
   m_Name: AudioManager
@@ -4800,23 +4817,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   master: {fileID: 24100000, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
   sounds: []
---- !u!114 &6853581686446448211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984724817728090033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d40a65e94fa04b849980630018653245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  master: {fileID: 24100000, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
-  musicSlider: {fileID: 650799166}
-  sfxSlider: {fileID: 332616420}
-  MusicVolText: {fileID: 812247352}
-  SFXVolText: {fileID: 316047759}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
