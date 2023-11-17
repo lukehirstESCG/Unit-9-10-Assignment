@@ -29,7 +29,7 @@ public class playerIdle : PlayerBaseState
         if (direction >= 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.walkState);
-            pacsm.pacAnim.SetBool("walk", true);
+            pacsm.pacAnim.SetBool("moving", true);
         }
     }
 }

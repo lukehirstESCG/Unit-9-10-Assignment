@@ -37,7 +37,7 @@ public class enemyChase : EnemyBaseState
 
         if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 0.15)
         {
-          //  KillPlayer();
+            PlayerHealth.health -= 1;
         }
     }
 }

@@ -30,7 +30,7 @@ public class playerWalk : PlayerBaseState
         if (direction <= 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.idleState);
-            pacsm.pacAnim.SetBool("walk", false);
+            pacsm.pacAnim.SetBool("moving", false);
         }
     }
 

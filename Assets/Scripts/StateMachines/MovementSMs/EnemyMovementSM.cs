@@ -18,14 +18,14 @@ public class EnemyMovementSM : EnemyStateMachine
     [HideInInspector]
     public enemyChase chaseState;
     [HideInInspector]
-    public enemyFlee fleeState;
+ //   public enemyFlee fleeState;
 
     private void Awake()
     {
         idleState = new enemyIdle(this);
         patrolState = new enemyPatrol(this);
         chaseState = new enemyChase(this);
-        fleeState = new enemyFlee(this);
+     //   fleeState = new enemyFlee(this);
     }
 
     protected override EnemyBaseState GetInitialState()

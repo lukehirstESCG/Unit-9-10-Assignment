@@ -3260,7 +3260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 61008852778076178}
-  - component: {fileID: 4477158566647667267}
+  - component: {fileID: 3961647744520163603}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -3268,7 +3268,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4477158566647667267
+--- !u!114 &3961647744520163603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
