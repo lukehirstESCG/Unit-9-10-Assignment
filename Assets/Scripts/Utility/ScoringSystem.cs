@@ -12,10 +12,10 @@ public class ScoringSystem : MonoBehaviour
     public static int high_score;
     private int games = 0;
 
-    private void Start()
+    public void Start()
     {
-        ScoringSystem.high_score = PlayerPrefs.GetInt("high_score", ScoringSystem.high_score);
-        ScoringSystem.highScoreText.text = ScoringSystem.high_score.ToString("High Score: " + ScoringSystem.high_score);
+        high_score = PlayerPrefs.GetInt("high_score", high_score);
+        highScoreText.text = high_score.ToString("High Score: " + high_score);
         games = 0;
 
         PlayerPrefs.GetInt("games", games);
@@ -31,14 +31,13 @@ public class ScoringSystem : MonoBehaviour
             PlayerPrefs.SetInt("games", 1);
         }
     }
-    private void Update()
-    {
-        UpdateScore();
-    }
     public void UpdateScore()
     {
         scoreText.text = score.ToString("Score: " + score);
+    }
 
+    public void Score()
+    {
         if (score > high_score)
         {
             high_score = score;
