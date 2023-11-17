@@ -48,7 +48,7 @@ public class playerWalk : PlayerBaseState
         pacsm.transform.Rotate(pacsm.rotation);
 
         // Camera Logic
-        pacsm.camera.transform.position = pacsm.player.transform.position;
-        pacsm.camera.rotation = pacsm.player.rotation;
+        pacsm.cam.transform.position = pacsm.player.transform.position;
+        pacsm.cam.rotation = pacsm.player.rotation;
     }
 }
