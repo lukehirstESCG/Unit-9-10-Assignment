@@ -20,7 +20,7 @@ public class PlayerStateMachine : MonoBehaviour
             currentState.UpdateLogic();
         }
     }
-    private void LateUpdate()
+    void LateUpdate()
     {
         if (currentState != null)
         {

@@ -14,22 +14,22 @@ public class playerIdle : PlayerBaseState
     public override void Enter()
     {
         base.Enter();
-        horizontalInput = 0;
-        verticalInput = 0;
+        horizontalInput = 0f;
+        verticalInput = 0f;
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
 
-        horizontalInput = pacsm.pacJoy.Horizontal;
-        verticalInput = pacsm.pacJoy.Vertical;
+        horizontalInput = pacsm.joystick.Horizontal;
+        verticalInput = pacsm.joystick.Vertical;
         float direction = new Vector2(horizontalInput, verticalInput).magnitude;
 
-        if (direction >= 0.01f)
+        if (direction > 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.walkState);
-            pacsm.pacAnim.SetBool("moving", true);
+            pacsm.anim.SetBool("moving", true);
         }
     }
 }
