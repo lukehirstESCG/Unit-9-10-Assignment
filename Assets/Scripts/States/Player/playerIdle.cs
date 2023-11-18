@@ -14,8 +14,8 @@ public class playerIdle : PlayerBaseState
     public override void Enter()
     {
         base.Enter();
-        horizontalInput = 0;
-        verticalInput = 0;
+        horizontalInput = 0f;
+        verticalInput = 0f;
     }
 
     public override void UpdateLogic()
