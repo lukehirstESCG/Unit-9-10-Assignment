@@ -7,7 +7,7 @@ public class PlayerMovementSM : PlayerStateMachine
     public CharacterController control;
     public Transform player;
     public Transform cam;
-    public VariableJoystick joystick;
+    public Joystick joystick;
     public Animator anim;
     public Vector3 direction;
     public Vector3 rotation;

@@ -14,8 +14,8 @@ public class playerIdle : PlayerBaseState
     public override void Enter()
     {
         base.Enter();
-        horizontalInput = 0f;
-        verticalInput = 0f;
+        horizontalInput = 0;
+        verticalInput = 0;
     }
 
     public override void UpdateLogic()
@@ -29,7 +29,7 @@ public class playerIdle : PlayerBaseState
         if (direction > 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.walkState);
-            pacsm.anim.SetBool("moving", true);
+            pacsm.anim.SetBool("walk", true);
         }
     }
 }

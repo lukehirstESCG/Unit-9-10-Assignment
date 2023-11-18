@@ -5,7 +5,8 @@ public class playerWalk : PlayerBaseState
     float horizontalInput;
     float verticalInput;
     private PlayerMovementSM pacsm;
-    public playerWalk(PlayerMovementSM playerStateMachine) : base("Moving", playerStateMachine)
+
+    public playerWalk(PlayerMovementSM playerStateMachine) : base("Walk", playerStateMachine)
     {
         pacsm = playerStateMachine;
     }
@@ -13,6 +14,7 @@ public class playerWalk : PlayerBaseState
     public override void Enter()
     {
         base.Enter();
+
         horizontalInput = 0;
         verticalInput = 0;
     }
@@ -23,12 +25,12 @@ public class playerWalk : PlayerBaseState
 
         horizontalInput = pacsm.joystick.Horizontal;
         verticalInput = pacsm.joystick.Vertical;
-        Vector3 direction = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+        float direction = new Vector2(horizontalInput, verticalInput).magnitude;
 
-        if (direction.magnitude <= 0.01)
+        if (direction <= 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.idleState);
-            pacsm.anim.SetBool("moving", false);
+            pacsm.anim.SetBool("walk", false);
         }
     }
 
@@ -36,14 +38,17 @@ public class playerWalk : PlayerBaseState
     {
         base.UpdatePhysics();
 
+        // Player (Pacman) logic
+
         pacsm.rotation = new Vector3(0, pacsm.joystick.Horizontal * pacsm.rotationSpeed * Time.deltaTime, 0);
 
         Vector3 move = new Vector3(0, 0, pacsm.joystick.Vertical * Time.deltaTime);
         move = pacsm.transform.TransformDirection(move);
-        pacsm.control.Move(move * pacsm.speed * Time.deltaTime);
+        pacsm.control.Move(move * pacsm.speed);
         pacsm.transform.Rotate(pacsm.rotation);
 
-        pacsm.cam.transform.position = pacsm.transform.position;
+        // Camera Logic
+        pacsm.cam.transform.position = pacsm.player.transform.position;
         pacsm.cam.rotation = pacsm.player.rotation;
     }
 }
