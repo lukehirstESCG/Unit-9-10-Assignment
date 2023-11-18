@@ -27,7 +27,7 @@ public class playerWalk : PlayerBaseState
         verticalInput = pacsm.joystick.Vertical;
         float direction = new Vector2(horizontalInput, verticalInput).magnitude;
 
-        if (direction <= 0.01)
+        if (direction <= 0.01f)
         {
             playerStateMachine.ChangeState(pacsm.idleState);
             pacsm.anim.SetBool("walk", false);
@@ -48,7 +48,7 @@ public class playerWalk : PlayerBaseState
         pacsm.transform.Rotate(pacsm.rotation);
 
         // Camera Logic
-        pacsm.cam.transform.position = pacsm.transform.position;
+        pacsm.cam.transform.position = pacsm.player.transform.position;
         pacsm.cam.rotation = pacsm.player.rotation;
     }
 }

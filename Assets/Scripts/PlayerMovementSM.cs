@@ -9,7 +9,9 @@ public class PlayerMovementSM : PlayerStateMachine
     public Transform cam;
     public Joystick joystick;
     public Animator anim;
+    [HideInInspector]
     public Vector3 direction;
+    [HideInInspector]
     public Vector3 rotation;
 
     [HideInInspector]
