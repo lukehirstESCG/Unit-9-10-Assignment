@@ -1,10 +1,12 @@
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class playerMoving : PlayerBaseState
 {
     float horizontalInput;
     float verticalInput;
-    float direction;
+    float turnSmoothVelocity;
+    Vector3 direction;
     Vector3 move;
     private PlayerMovementSM playsm;
 
@@ -26,9 +28,9 @@ public class playerMoving : PlayerBaseState
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;
-        direction = new Vector2(horizontalInput, verticalInput).magnitude;
+        direction = new Vector3(horizontalInput, 0, verticalInput);
 
-        if (direction <= 0.01)
+        if (direction.magnitude <= 0.01)
         {
             playerStateMachine.ChangeState(playsm.idleState);
             playsm.anim.SetBool("moving", false);
@@ -39,13 +41,10 @@ public class playerMoving : PlayerBaseState
     {
         base.UpdatePhysics();
 
-        playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
-
-        move = new Vector3(0, 0, playsm.joystick.Vertical * Time.deltaTime);
-        playsm.control.Move(move * playsm.speed);
-        playsm.transform.Rotate(playsm.rotation);
-
-        playsm.playerCam.transform.position = playsm.transform.position;
-        playsm.playerCam.rotation = playsm.player.rotation;
+        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + playsm.playerCam.eulerAngles.y;
+        float angle = Mathf.SmoothDampAngle(playsm.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, playsm.turnSmoothTime);
+        playsm.transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        move = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+        playsm.control.Move(move.normalized * playsm.speed * Time.deltaTime);
     }
 }
