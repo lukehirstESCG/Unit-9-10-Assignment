@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerBaseState : MonoBehaviour
+public class PlayerBaseState
 {
     public string name;
     protected PlayerStateMachine playerStateMachine;
