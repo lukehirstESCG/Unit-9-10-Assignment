@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour
 {
-    public static TextMeshProUGUI scoreText;
-    public static TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
     public static int score;
     public static int high_score;
     private int games = 0;
@@ -17,6 +17,7 @@ public class ScoringSystem : MonoBehaviour
         high_score = PlayerPrefs.GetInt("high_score", high_score);
         highScoreText.text = high_score.ToString("High Score: " + high_score);
         games = 0;
+        score = 0;
 
         PlayerPrefs.GetInt("games", games);
 
@@ -31,7 +32,13 @@ public class ScoringSystem : MonoBehaviour
             PlayerPrefs.SetInt("games", 1);
         }
     }
-    public void UpdateScore()
+
+    void Update()
+    {
+        UpdateScore();
+    }
+
+    void UpdateScore()
     {
         scoreText.text = score.ToString("Score: " + score);
     }
