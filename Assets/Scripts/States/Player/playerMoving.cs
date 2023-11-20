@@ -1,16 +1,12 @@
-using UnityEditor.Rendering;
 using UnityEngine;
 
-public class playerMoving : PlayerBaseState
+public class playerWalk : PlayerBaseState
 {
     float horizontalInput;
     float verticalInput;
-    float turnSmoothVelocity;
-    Vector3 direction;
-    Vector3 move;
+    float direction;
     private PlayerMovementSM playsm;
-
-    public playerMoving(PlayerMovementSM playerStateMachine) :base("Moving", playerStateMachine)
+    public playerWalk(PlayerMovementSM playerStateMachine) : base("Moving", playerStateMachine)
     {
         playsm = playerStateMachine;
     }
@@ -28,9 +24,9 @@ public class playerMoving : PlayerBaseState
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;
-        direction = new Vector3(horizontalInput, 0, verticalInput);
+        direction = new Vector2(horizontalInput, verticalInput).magnitude;
 
-        if (direction.magnitude <= 0.01)
+        if (direction < 0.01f)
         {
             playerStateMachine.ChangeState(playsm.idleState);
             playsm.anim.SetBool("moving", false);
@@ -41,10 +37,14 @@ public class playerMoving : PlayerBaseState
     {
         base.UpdatePhysics();
 
-        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + playsm.playerCam.eulerAngles.y;
-        float angle = Mathf.SmoothDampAngle(playsm.transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, playsm.turnSmoothTime);
-        playsm.transform.rotation = Quaternion.Euler(0f, angle, 0f);
-        move = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-        playsm.control.Move(move.normalized * playsm.speed * Time.deltaTime);
+        playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
+
+        Vector3 move = new Vector3(0, 0, playsm.joystick.Vertical * Time.deltaTime);
+        move = playsm.transform.TransformDirection(move);
+        playsm.control.Move(move * playsm.speed * Time.deltaTime);
+        playsm.transform.Rotate(playsm.rotation);
+
+        playsm.playerCam.transform.position = playsm.transform.position;
+        playsm.playerCam.rotation = playsm.player.rotation;
     }
 }
