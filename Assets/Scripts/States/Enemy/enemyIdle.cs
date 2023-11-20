@@ -18,7 +18,7 @@ public class enemyIdle : EnemyBaseState
     {
         base.UpdateLogic();
 
-        if (Vector3.Distance(ghostsm.enemy.transform.position, ghostsm.target.position) <= 8)
+        if (Vector3.Distance(ghostsm.enemy.transform.position, ghostsm.target.position) <= 128)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }

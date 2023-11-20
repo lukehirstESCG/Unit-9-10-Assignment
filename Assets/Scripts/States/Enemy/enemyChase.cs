@@ -19,7 +19,7 @@ public class enemyChase : EnemyBaseState
     {
         base.UpdateLogic();
 
-        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) > 3)
+        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) > 6)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }
@@ -35,7 +35,7 @@ public class enemyChase : EnemyBaseState
 
         ghostsm.enemy.transform.rotation = Quaternion.Slerp(ghostsm.enemy.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 0.15)
+        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) < 1)
         {
             PlayerHealth.health -= 1;
         }
