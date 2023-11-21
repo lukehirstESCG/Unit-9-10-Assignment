@@ -4,6 +4,8 @@ using UnityEngine.AI;
 public class EnemyMovementSM : EnemyStateMachine
 {
     public Transform target;
+    public PlayerHealth pHealth;
+    public int damage;
     public Transform enemy;
     public Transform[] points;
     public NavMeshAgent agent;

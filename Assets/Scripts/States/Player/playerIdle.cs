@@ -5,7 +5,8 @@ public class playerIdle : PlayerBaseState
     private PlayerMovementSM playsm;
     float horizontalInput;
     float verticalInput;
-    float direction;
+    Vector3 direction;
+    float magnitude;
 
     public playerIdle(PlayerMovementSM playerStateMachine) : base("Idle", playerStateMachine)
     {
@@ -25,9 +26,11 @@ public class playerIdle : PlayerBaseState
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;
-        direction = new Vector2(horizontalInput, verticalInput).magnitude;
+        direction = new Vector3(horizontalInput, 0, verticalInput);
+        magnitude = direction.magnitude;
+        magnitude = Mathf.Clamp01(magnitude);
 
-        if (direction > 0.01f)
+        if (direction.magnitude > 0.01f)
         {
             playerStateMachine.ChangeState(playsm.movingState);
             playsm.anim.SetBool("moving", true);

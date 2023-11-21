@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class enemyChase : EnemyBaseState
 {
@@ -19,7 +18,7 @@ public class enemyChase : EnemyBaseState
     {
         base.UpdateLogic();
 
-        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) > 6)
+        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) > 10)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }
@@ -35,9 +34,9 @@ public class enemyChase : EnemyBaseState
 
         ghostsm.enemy.transform.rotation = Quaternion.Slerp(ghostsm.enemy.transform.rotation, Quaternion.LookRotation(direction), 0.1f);
 
-        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) < 1)
+        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 1)
         {
-            PlayerHealth.health -= 1;
+            PlayerHealth.livesCount -= 1;
         }
     }
 }

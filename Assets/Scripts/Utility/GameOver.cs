@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOver;
+    public PlayerHealth pHealth;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class GameOver : MonoBehaviour
 
     public void OverCheck()
     {
-        if (PlayerHealth.health == 0)
+        if (PlayerHealth.livesCount == 0)
         {
             gameOver.SetActive(true);
             Time.timeScale = 0;
