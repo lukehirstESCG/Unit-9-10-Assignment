@@ -7,32 +7,31 @@ public class Teleport : MonoBehaviour
     public Transform teleportTarget;
     public GameObject target;
     public GameObject Inky;
-    public GameObject Pinky;
-    public GameObject Blinky;
     public GameObject Clyde;
+    public GameObject Blinky;
+    public GameObject Pinky;
 
-    public void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             target.transform.position = teleportTarget.transform.position;
-        }    
-
-        if (other.gameObject.tag == "Blinky")
-        {
-            Blinky.transform.position = teleportTarget.transform.position;
         }
-        if (other.gameObject.tag == "Inky")
+        if (other.CompareTag("Inky"))
         {
             Inky.transform.position = teleportTarget.transform.position;
         }
-        if (other.gameObject.tag == "Clyde")
-        {
-            Clyde.transform.position = teleportTarget.transform.position;
-        }
-        if (other.gameObject.tag == "Pinky")
+        if (other.CompareTag("Pinky"))
         {
             Pinky.transform.position = teleportTarget.transform.position;
+        }
+        if (other.CompareTag("Blinky"))
+        {
+            Blinky.transform.position = teleportTarget.transform.position;
+        }
+        if (other.CompareTag("Clyde"))
+        {
+            Clyde.transform.position = teleportTarget.transform.position;
         }
     }
 }
