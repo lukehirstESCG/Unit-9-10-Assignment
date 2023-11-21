@@ -13,7 +13,10 @@ public class Teleport : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        target.transform.position = teleportTarget.transform.position;
+        if (other.gameObject.tag == "Player")
+        {
+            target.transform.position = teleportTarget.transform.position;
+        }    
 
         if (other.gameObject.tag == "Blinky")
         {
