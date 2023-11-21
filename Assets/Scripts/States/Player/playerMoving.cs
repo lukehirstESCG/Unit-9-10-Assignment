@@ -7,6 +7,7 @@ public class playerWalk : PlayerBaseState
     Vector3 direction;
     float magnitude;
     private PlayerMovementSM playsm;
+    private PlayerHealth pHealth;
     public playerWalk(PlayerMovementSM playerStateMachine) : base("Moving", playerStateMachine)
     {
         playsm = playerStateMachine;
@@ -49,5 +50,13 @@ public class playerWalk : PlayerBaseState
 
         playsm.playerCam.transform.position = playsm.transform.position;
         playsm.playerCam.rotation = playsm.player.rotation;
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Clyde" || other.gameObject.tag == "Blinky" || other.gameObject.tag == "Pinky" || other.gameObject.tag == "Inky")
+        {
+            pHealth.livesCount--;
+        }
     }
 }

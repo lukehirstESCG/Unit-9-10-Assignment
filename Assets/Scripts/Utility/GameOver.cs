@@ -14,15 +14,6 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    public void OverCheck()
-    {
-        if (PlayerHealth.livesCount == 0)
-        {
-            gameOver.SetActive(true);
-            Time.timeScale = 0;
-        }
-    }
-
     public void SaveScore()
     {
         PlayerPrefs.SetFloat("high_score", ScoringSystem.high_score);

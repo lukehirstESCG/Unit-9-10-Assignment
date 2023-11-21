@@ -8,7 +8,7 @@ public class Collectible : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ScoringSystem.score += 10;
+            ScoringSystem.score = ScoringSystem.score + 10;
             Destroy(gameObject);
         }
     }
