@@ -9,8 +9,10 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 100;
+    public float protectedTime = 2;
     public float livesCount = 5;
     public float maxHealth;
+    public bool Protected = false;
     public Image healthBar;
     public TextMeshProUGUI lives;
     public TextMeshProUGUI healthText;
@@ -39,15 +41,26 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
-        healthText.text = "Health: " + health;
-        Debug.Log("OW!");
+        if(!Protected)
+        {
+            health -= damage;
+            StartCoroutine(DamageCooldown());
+            healthText.text = "Health: " + health;
+            Debug.Log("OW!");
+        }
         if (health <= 0)
         {
             RemoveLife();
             Destroy(GameObject.Find("Pacman"), 2);
             SceneManager.LoadScene("Game");
         }
+    }
+
+    IEnumerator DamageCooldown()
+    {
+        Protected = true;
+        yield return new WaitForSeconds(protectedTime);
+        Protected = false;
     }
 
     public void RemoveLife()

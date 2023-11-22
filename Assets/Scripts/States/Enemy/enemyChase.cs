@@ -36,7 +36,7 @@ public class enemyChase : EnemyBaseState
 
         if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 4)
         {
-            ghostsm.StartCoroutine(ghostsm.DamageCooldown());
+            ghostsm.pHealth.TakeDamage(ghostsm.damage);
         }
     }
 }
