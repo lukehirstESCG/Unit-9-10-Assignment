@@ -15,7 +15,7 @@ public class ScoringSystem : MonoBehaviour
     public void Start()
     {
         high_score = PlayerPrefs.GetInt("high_score", high_score);
-        highScoreText.text = high_score.ToString("High Score: " + high_score);
+        highScoreText.text = "High Score: " + high_score;
         games = 0;
         score = 0;
 
@@ -40,7 +40,7 @@ public class ScoringSystem : MonoBehaviour
 
     void UpdateScore()
     {
-        scoreText.text = score.ToString("Score: " + score);
+        scoreText.text = "Score: " + score;
     }
 
     public void Score()

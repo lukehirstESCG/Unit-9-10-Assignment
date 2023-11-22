@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,7 +6,7 @@ public class EnemyMovementSM : EnemyStateMachine
 {
     public Transform target;
     public PlayerHealth pHealth;
-    public int damage;
+    public float damage;
     public Transform enemy;
     public Transform[] points;
     public NavMeshAgent agent;
@@ -33,5 +34,14 @@ public class EnemyMovementSM : EnemyStateMachine
     protected override EnemyBaseState GetInitialState()
     {
         return idleState;
+    }
+
+    // Damage Cooldown for enemies.
+    public IEnumerator DamageCooldown()
+    {
+        pHealth.TakeDamage(damage);
+        attacking = true;
+        yield return new WaitForSeconds(5);
+        attacking = true;
     }
 }

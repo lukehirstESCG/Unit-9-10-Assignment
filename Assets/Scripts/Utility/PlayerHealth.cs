@@ -1,47 +1,77 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public GameObject[] pacs;
-    public GameObject gameOverScreen;
-    public GameObject MainUI;
-    public GameObject target;
+    public float health = 100;
+    public float livesCount = 5;
+    public float maxHealth;
+    public Image healthBar;
     public TextMeshProUGUI lives;
-    public int livesCount;
+    public TextMeshProUGUI healthText;
+    public GameOver over;
+    public GameObject Pacman;
 
-    void Start()
+    private void Start()
     {
-        livesCount = 5;
-        gameOverScreen.SetActive(false);
+        if (PlayerPrefs.HasKey("Lives"))
+        {
+            livesCount = PlayerPrefs.GetFloat("Lives", livesCount);
+        }
+        else
+        {
+            livesCount = 5;
+        }
+        lives.text = "Lives: " + livesCount;
+        maxHealth = health;
     }
 
-    void Update()
+    private void Update()
     {
-        lives.text = livesCount.ToString("Lives: " + livesCount);
-        if (livesCount == 0)
-        {
-            Time.timeScale = 0;
-            gameOverScreen.SetActive(true);
-            MainUI.SetActive(false);
-        }
-
+        healthBar.fillAmount = Mathf.Clamp(health / maxHealth, 0, 100);
+        healthText.text = "Health: " + health;
     }
 
-    public void Health()
+    public void TakeDamage(float damage)
     {
-        for (int i = 0; i == 5; i++)
+        health -= damage;
+        healthText.text = "Health: " + health;
+        Debug.Log("OW!");
+        if (health <= 0)
         {
-            pacs[i].SetActive(true);
+            RemoveLife();
+            Destroy(GameObject.Find("Pacman"), 2);
+            SceneManager.LoadScene("Game");
         }
-        
-        if (livesCount > 0)
+    }
+
+    public void RemoveLife()
+    {
+        livesCount -= 1;
+        PlayerPrefs.SetFloat("Lives", livesCount);
+        PlayerPrefs.Save();
+        health = 100;
+        lives.text = "Lives: " + livesCount;
+        healthText.text = "Health: " + health;
+        if (livesCount <= 0)
         {
-            pacs[livesCount - 1].SetActive(false);
-            lives.text = livesCount.ToString("Lives: " + livesCount);
+            Dead();
         }
+    }
+
+    public void Dead()
+    {
+        over.Dead();
+        PlayerPrefs.SetFloat("high_score", ScoringSystem.high_score);
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteKey("Lives");
     }
 }

@@ -51,12 +51,4 @@ public class playerWalk : PlayerBaseState
         playsm.playerCam.transform.position = playsm.transform.position;
         playsm.playerCam.rotation = playsm.player.rotation;
     }
-
-    public void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Clyde" || other.gameObject.tag == "Blinky" || other.gameObject.tag == "Pinky" || other.gameObject.tag == "Inky")
-        {
-            pHealth.livesCount--;
-        }
-    }
 }
