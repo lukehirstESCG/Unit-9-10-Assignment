@@ -68,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
         livesCount -= 1;
         PlayerPrefs.SetFloat("Lives", livesCount);
         health = 100;
+        ScoringSystem.score = 0;
         lives.text = "Lives: " + livesCount;
         healthText.text = "Health: " + health;
         if (livesCount <= 0)

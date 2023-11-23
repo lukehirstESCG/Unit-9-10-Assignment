@@ -32,19 +32,17 @@ public class ScoringSystem : MonoBehaviour
 
     void UpdateScore()
     {
+        if (score > high_score)
+        {
+            high_score = score;
+            PlayerPrefs.SetInt("high_score", high_score);
+        }
         scoreText.text = "Score: " + score;
         highScoreText.text = "High Score: " + high_score;
     }
 
     public void Score()
     {
-        if (score > high_score)
-        {
-            high_score = score;
-        }
-        highScoreText.text = "High Score: " + high_score;
-        PlayerPrefs.SetInt("high_score", high_score);
-
         if (!GameObject.Find("Collectible"))
         {
             Complete();
@@ -56,14 +54,10 @@ public class ScoringSystem : MonoBehaviour
         complete.GameComplete();
     }
 
-    public void LoadScore()
-    {
-        high_score = PlayerPrefs.GetInt("high_score");
-    }
-
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("high_score", high_score);
+        PlayerPrefs.DeleteKey("high_score");
         Application.Quit();
     }
 }

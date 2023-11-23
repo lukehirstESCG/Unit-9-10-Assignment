@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.30
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -540,7 +540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.9
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -947,7 +947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.11
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1146,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.2
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1242,9 +1242,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.13
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+--- !u!1001 &181657545
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 478924932045743699, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2264725343186729169, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c44da9f166a73e409565a640d2c1eba, type: 2}
+    - target: {fileID: 4677660593842251258, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: system
+      value: 
+      objectReference: {fileID: 419894703}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1353.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -490.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788465352368257039, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
+      propertyPath: m_Name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4677660593842251258, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1307,7 +1377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.41
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1506,7 +1576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.40
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2065,7 +2135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.12
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2254,7 +2324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.27
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2560,7 +2630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.32
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2747,6 +2817,7 @@ GameObject:
   - component: {fileID: 419894704}
   - component: {fileID: 419894705}
   - component: {fileID: 419894706}
+  - component: {fileID: 419894707}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2860,6 +2931,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainUI: {fileID: 1661564939}
   winScreen: {fileID: 1451763644}
+--- !u!114 &419894707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419894698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8394b0d8a77691e49ad0303290673222, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Protected: 0
+  Powered: 0
+  Pacman: {fileID: 1567536173}
+  powerTimer: 10
 --- !u!1 &421994821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,7 +3227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.36
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3280,7 +3367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.7
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3371,7 +3458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.37
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3511,7 +3598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.6
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3811,7 +3898,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.31
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4100,7 +4187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.22
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4165,7 +4252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.1
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4418,7 +4505,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
   pHealth: {fileID: 1567536178}
+  power: {fileID: 0}
   damage: 20
+  EnemyDistance: 30
   enemy: {fileID: 800201292}
   points:
   - {fileID: 1171440116505343013}
@@ -4667,7 +4756,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
   pHealth: {fileID: 1567536178}
+  power: {fileID: 0}
   damage: 20
+  EnemyDistance: 30
   enemy: {fileID: 846639670}
   points:
   - {fileID: 5912504552805233739}
@@ -4912,7 +5003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.10
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4977,7 +5068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.39
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5608,7 +5699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.16
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6073,7 +6164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
   pHealth: {fileID: 1567536178}
+  power: {fileID: 0}
   damage: 20
+  EnemyDistance: 30
   enemy: {fileID: 1062138289}
   points:
   - {fileID: 3856509614150122312}
@@ -6203,7 +6296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.43
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6402,7 +6495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.18
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6467,7 +6560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.8
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6602,7 +6695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.15
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6885,7 +6978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.17
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6950,7 +7043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.28
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7083,7 +7176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.21
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7148,7 +7241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.35
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7347,7 +7440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.44
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7480,7 +7573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.24
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7857,7 +7950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.38
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8056,7 +8149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.25
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8155,7 +8248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12dca779e41ebd46bc11892592ed322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7500
+  speed: 10000
   rotationSpeed: 180
   control: {fileID: 1567536175}
   player: {fileID: 1567536177}
@@ -8214,7 +8307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   protectedTime: 1
-  livesCount: 1
+  livesCount: 5
   maxHealth: 100
   Protected: 0
   healthBar: {fileID: 1753292297}
@@ -8280,7 +8373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.42
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8731,7 +8824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.29
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9286,7 +9379,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
   pHealth: {fileID: 1567536178}
+  power: {fileID: 0}
   damage: 20
+  EnemyDistance: 30
   enemy: {fileID: 1788937855}
   points:
   - {fileID: 1428110492020712696}
@@ -9396,7 +9491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.19
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9742,7 +9837,7 @@ MonoBehaviour:
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
   m_CameraRadius: 0.1
-  m_Strategy: 1
+  m_Strategy: 0
   m_MaximumEffort: 4
   m_SmoothingTime: 0
   m_Damping: 0
@@ -10018,7 +10113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.26
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10114,7 +10209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.14
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10303,7 +10398,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.3
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10449,7 +10544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.5
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10514,7 +10609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.33
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10579,7 +10674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.34
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10644,7 +10739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.4
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10745,7 +10840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.20
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10810,7 +10905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere.23
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15161,7 +15256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296261153056444362, guid: b9fef111574764d43a1aa0d2bdd7a6d4, type: 3}
       propertyPath: m_Name
-      value: Sphere
+      value: Collectible
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22742,6 +22837,7 @@ SceneRoots:
   - {fileID: 504993885}
   - {fileID: 1501300909}
   - {fileID: 860676600}
+  - {fileID: 181657545}
   - {fileID: 212939076}
   - {fileID: 191465830}
   - {fileID: 1572273545}

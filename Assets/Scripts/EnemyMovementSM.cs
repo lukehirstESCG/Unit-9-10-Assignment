@@ -6,7 +6,7 @@ public class EnemyMovementSM : EnemyStateMachine
 {
     public Transform target;
     public PlayerHealth pHealth;
-    public PowerUp power;
+    public PowerUpSystem power;
     public float damage;
     public float EnemyDistance = 30;
     public Transform enemy;

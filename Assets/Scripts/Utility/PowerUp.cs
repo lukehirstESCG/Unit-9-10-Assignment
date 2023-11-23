@@ -4,32 +4,13 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    public bool Protected = false;
-    public bool Powered = false;
-    public float powerTimer = 10;
-
-    public void CheckForPower()
+    public PowerUpSystem power;
+    void OnTriggerEnter(Collider other)
     {
-        if (!Powered)
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(PacmanPower());
-            Powered = true;
-        }
-    }
-
-    IEnumerator PacmanPower()
-    {
-        Protected = true;
-        yield return new WaitForSeconds(powerTimer);
-        Protected = false;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            CheckForPower();
-            Destroy(GameObject.Find("PowerUp"), 10);
+            Destroy(gameObject);
+            power.CheckForPower();
         }
     }
 }
