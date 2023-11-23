@@ -8,30 +8,20 @@ public class ScoringSystem : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
-    public static int score;
-    public static int scoreTotal = 50;
+    public static int score = 0;
     public static int high_score;
-    private int games = 0;
     public CompletedGame complete;
 
     public void Start()
     {
-        high_score = PlayerPrefs.GetInt("high_score", high_score);
-        highScoreText.text = "High Score: " + high_score;
-        games = 0;
-        score = 0;
-
-        PlayerPrefs.GetInt("games", games);
-
-        if (PlayerPrefs.HasKey("games"))
+        if (PlayerPrefs.HasKey("high_score"))
         {
-            games = PlayerPrefs.GetInt("games");
-            games += 1;
-            PlayerPrefs.SetInt("games", games);
+            high_score = PlayerPrefs.GetInt("high_score");
+            score = 0;
         }
         else
         {
-            PlayerPrefs.SetInt("games", 1);
+            high_score = 0;
         }
     }
 
@@ -43,8 +33,7 @@ public class ScoringSystem : MonoBehaviour
     void UpdateScore()
     {
         scoreText.text = "Score: " + score;
-        highScoreText.text = "High Score: " + score;
-        scoreTotal = score;
+        highScoreText.text = "High Score: " + high_score;
     }
 
     public void Score()
@@ -52,12 +41,11 @@ public class ScoringSystem : MonoBehaviour
         if (score > high_score)
         {
             high_score = score;
-            highScoreText.text = "High Score: " + high_score;
-            PlayerPrefs.SetInt("high_score", high_score);
-            PlayerPrefs.SetInt("score", score);
-            PlayerPrefs.Save();
         }
-        if (score > scoreTotal)
+        highScoreText.text = "High Score: " + high_score;
+        PlayerPrefs.SetInt("high_score", high_score);
+
+        if (!GameObject.Find("Collectible"))
         {
             Complete();
         }
@@ -65,20 +53,17 @@ public class ScoringSystem : MonoBehaviour
 
     public void Complete()
     {
-        score = scoreTotal;
         complete.GameComplete();
     }
 
     public void LoadScore()
     {
         high_score = PlayerPrefs.GetInt("high_score");
-        highScoreText.text = high_score.ToString();
     }
 
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("high_score", high_score);
-        PlayerPrefs.Save();
         Application.Quit();
     }
 }

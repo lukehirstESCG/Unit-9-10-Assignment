@@ -21,10 +21,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("Lives") && PlayerPrefs.HasKey("high_score"))
+        if (PlayerPrefs.HasKey("Lives"))
         {
             livesCount = PlayerPrefs.GetFloat("Lives", livesCount);
-            ScoringSystem.high_score = PlayerPrefs.GetInt("high_score", ScoringSystem.high_score);
         }
         else
         {
@@ -67,10 +66,7 @@ public class PlayerHealth : MonoBehaviour
     public void RemoveLife()
     {
         livesCount -= 1;
-        ScoringSystem.high_score += ScoringSystem.score;
         PlayerPrefs.SetFloat("Lives", livesCount);
-        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score + ScoringSystem.score);
-        PlayerPrefs.Save();
         health = 100;
         lives.text = "Lives: " + livesCount;
         healthText.text = "Health: " + health;
