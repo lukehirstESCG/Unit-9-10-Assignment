@@ -7,7 +7,6 @@ public class playerWalk : PlayerBaseState
     Vector3 direction;
     float magnitude;
     private PlayerMovementSM playsm;
-    private PlayerHealth pHealth;
     public playerWalk(PlayerMovementSM playerStateMachine) : base("Moving", playerStateMachine)
     {
         playsm = playerStateMachine;
@@ -18,11 +17,13 @@ public class playerWalk : PlayerBaseState
         base.Enter();
         horizontalInput = 0;
         verticalInput = 0;
+        playsm.speed = 0;
     }
 
     public override void UpdateLogic()
     {
         base.UpdateLogic();
+        playsm.speed = 500;
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;

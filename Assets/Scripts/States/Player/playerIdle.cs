@@ -18,6 +18,7 @@ public class playerIdle : PlayerBaseState
         base.Enter();
         horizontalInput = 0;
         verticalInput = 0;
+        playsm.speed = 100;
     }
 
     public override void UpdateLogic()
