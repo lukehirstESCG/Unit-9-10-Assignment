@@ -23,7 +23,7 @@ public class playerWalk : PlayerBaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        playsm.speed = 500;
+        playsm.speed = 1500;
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;

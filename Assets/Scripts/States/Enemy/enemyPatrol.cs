@@ -28,6 +28,11 @@ public class enemyPatrol : EnemyBaseState
         {
             enemyStateMachine.ChangeState(ghostsm.chaseState);
         }
+
+        if (ghostsm.power.Powered == true)
+        {
+            enemyStateMachine.ChangeState(ghostsm.fleeState);
+        }
     }
 
     public override void UpdatePhysics()
