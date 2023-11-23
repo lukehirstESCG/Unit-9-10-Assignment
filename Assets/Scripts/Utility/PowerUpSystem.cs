@@ -32,7 +32,7 @@ public class PowerUpSystem : MonoBehaviour
         Powered = true;
         speed = speed * 2;
         yield return new WaitForSeconds(powerTimer);
-        speed = 100;
+        speed = 500;
         Protected = false;
         Powered = false;
     }
