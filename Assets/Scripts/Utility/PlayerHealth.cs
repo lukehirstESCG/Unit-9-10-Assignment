@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 100;
-    public float protectedTime = 2;
+    public float protectedTime = 1;
     public float livesCount = 5;
     public float maxHealth;
     public bool Protected = false;
@@ -21,9 +21,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        if (PlayerPrefs.HasKey("Lives"))
+        if (PlayerPrefs.HasKey("Lives") && PlayerPrefs.HasKey("high_score"))
         {
             livesCount = PlayerPrefs.GetFloat("Lives", livesCount);
+            ScoringSystem.high_score = PlayerPrefs.GetInt("high_score", ScoringSystem.high_score);
         }
         else
         {
@@ -66,7 +67,9 @@ public class PlayerHealth : MonoBehaviour
     public void RemoveLife()
     {
         livesCount -= 1;
+        ScoringSystem.high_score += ScoringSystem.score;
         PlayerPrefs.SetFloat("Lives", livesCount);
+        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score + ScoringSystem.score);
         PlayerPrefs.Save();
         health = 100;
         lives.text = "Lives: " + livesCount;
@@ -80,11 +83,13 @@ public class PlayerHealth : MonoBehaviour
     public void Dead()
     {
         over.Dead();
-        PlayerPrefs.SetFloat("high_score", ScoringSystem.high_score);
+        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
+        PlayerPrefs.Save();
     }
 
     private void OnApplicationQuit()
     {
         PlayerPrefs.DeleteKey("Lives");
+        Application.Quit();
     }
 }

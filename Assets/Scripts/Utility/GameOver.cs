@@ -24,14 +24,14 @@ public class GameOver : MonoBehaviour
 
     public void SaveScore()
     {
-        PlayerPrefs.SetFloat("high_score", ScoringSystem.high_score);
+        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
         PlayerPrefs.DeleteKey("Lives");
         SceneManager.LoadScene("Game");
     }
 
     public void OnApplicationQuit()
     {
-        PlayerPrefs.SetFloat("high_score", ScoringSystem.high_score);
+        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
         PlayerPrefs.Save();
         Application.Quit();
     }

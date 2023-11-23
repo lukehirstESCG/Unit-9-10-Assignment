@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovementSM : PlayerStateMachine
 {
-    public float speed = 5;
+    public float speed = 105;
     public float rotationSpeed;
     public CharacterController control;
     public Transform player;

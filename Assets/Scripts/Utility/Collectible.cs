@@ -9,6 +9,8 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ScoringSystem.score = ScoringSystem.score + 10;
+            PlayerPrefs.SetInt("score", ScoringSystem.score);
+            ScoringSystem.high_score += ScoringSystem.score;
             Destroy(gameObject);
         }
     }
