@@ -18,7 +18,7 @@ public class enemyFlee : EnemyBaseState
     {
         base.UpdateLogic();
 
-        if(ghostsm.EnemyDistance > 30)
+        if(ghostsm.power.Powered == false)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }
@@ -28,15 +28,6 @@ public class enemyFlee : EnemyBaseState
     {
         base.UpdatePhysics();
 
-        float distToPlayer = Vector3.Distance(ghostsm.enemy.transform.position, ghostsm.target.transform.position);
-
-        if (distToPlayer > ghostsm.EnemyDistance)
-        {
-            Vector3 runDist = ghostsm.enemy.transform.position - ghostsm.target.transform.position;
-
-            Vector3 newPos = ghostsm.enemy.transform.position + runDist;
-
-            ghostsm.agent.SetDestination(newPos);
-        }
+        Vector3 direction = ghostsm.enemy.transform.position - ghostsm.target.transform.position;
     }
 }

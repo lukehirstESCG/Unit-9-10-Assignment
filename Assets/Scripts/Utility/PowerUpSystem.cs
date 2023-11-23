@@ -28,7 +28,9 @@ public class PowerUpSystem : MonoBehaviour
     public IEnumerator PacmanPower()
     {
         Protected = true;
+        Powered = true;
         yield return new WaitForSeconds(powerTimer);
         Protected = false;
+        Powered = false;
     }
 }

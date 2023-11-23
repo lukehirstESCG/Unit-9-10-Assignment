@@ -8,7 +8,6 @@ public class EnemyMovementSM : EnemyStateMachine
     public PlayerHealth pHealth;
     public PowerUpSystem power;
     public float damage;
-    public float EnemyDistance = 30;
     public Transform enemy;
     public Transform[] points;
     public NavMeshAgent agent;

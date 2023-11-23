@@ -43,7 +43,7 @@ public class ScoringSystem : MonoBehaviour
 
     public void Score()
     {
-        if (!GameObject.Find("Collectible"))
+        if (scoreText.text == "50")
         {
             Complete();
         }
@@ -57,7 +57,6 @@ public class ScoringSystem : MonoBehaviour
     private void OnApplicationQuit()
     {
         PlayerPrefs.SetInt("high_score", high_score);
-        PlayerPrefs.DeleteKey("high_score");
         Application.Quit();
     }
 }

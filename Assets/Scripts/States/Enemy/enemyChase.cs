@@ -23,7 +23,7 @@ public class enemyChase : EnemyBaseState
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }
 
-        if (ghostsm.power.Powered == false)
+        if (ghostsm.power.Powered == true)
         {
             enemyStateMachine.ChangeState(ghostsm.fleeState);
         }
