@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if(!Protected)
+        if (!Protected)
         {
             health -= damage;
             StartCoroutine(DamageCooldown());
@@ -84,7 +84,6 @@ public class PlayerHealth : MonoBehaviour
     {
         over.Dead();
         PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
-        PlayerPrefs.Save();
     }
 
     private void OnApplicationQuit()
