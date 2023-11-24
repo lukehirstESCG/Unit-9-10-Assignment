@@ -51,6 +51,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             RemoveLife();
+            FindFirstObjectByType<AudioManager>().Play("dead");
             Destroy(GameObject.Find("Pacman"), 2);
             SceneManager.LoadScene("Game");
         }
@@ -74,6 +75,7 @@ public class PlayerHealth : MonoBehaviour
         if (livesCount <= 0)
         {
             Dead();
+            FindFirstObjectByType<AudioManager>().Play("dead");
         }
     }
 

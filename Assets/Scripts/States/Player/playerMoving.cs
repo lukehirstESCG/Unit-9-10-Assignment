@@ -34,6 +34,7 @@ public class playerWalk : PlayerBaseState
         if (direction.magnitude < 0.01f)
         {
             playerStateMachine.ChangeState(playsm.idleState);
+            Object.FindFirstObjectByType<AudioManager>().Stop("walk");
             playsm.anim.SetBool("moving", false);
         }
     }

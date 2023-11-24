@@ -10,6 +10,7 @@ public class EnemyMovementSM : EnemyStateMachine
     public float damage;
     public Transform enemy;
     public Transform[] points;
+    public float EnemyDistance = 20;
     public NavMeshAgent agent;
     [HideInInspector]
     public int dests;

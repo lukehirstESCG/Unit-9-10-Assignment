@@ -10,6 +10,10 @@ public class TitleScreen : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void DeleteHighScore()
+    {
+        PlayerPrefs.DeleteKey("high_score");
+    }
     public void OnApplicationQuit()
     {
         Application.Quit();

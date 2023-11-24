@@ -17,6 +17,7 @@ public class StartGame : MonoBehaviour
 
     public void GameStart()
     {
+        FindFirstObjectByType<AudioManager>().Play("start");
         IntroScreen.SetActive(false);
         MainUI.SetActive(true);
         Destroy(GameObject.Find("GhostpenGate"), 5);

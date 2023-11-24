@@ -8,8 +8,6 @@ public class ScoringSystem : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
-    public GameObject MainUI;
-    public GameObject winScreen;
     public static int score = 0;
     public static int high_score;
     public bool completed = false;
@@ -58,6 +56,7 @@ public class ScoringSystem : MonoBehaviour
     public void Complete()
     {
         complete.GameComplete();
+        FindFirstObjectByType<AudioManager>().Play("winner");
     }
 
     private void OnApplicationQuit()

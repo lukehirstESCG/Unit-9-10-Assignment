@@ -16,6 +16,7 @@ public class Teleport : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             target.transform.position = teleportTarget.transform.position;
+            FindFirstObjectByType<AudioManager>().Play("teleport");
         }
         if (other.CompareTag("Inky"))
         {

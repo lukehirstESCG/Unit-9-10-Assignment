@@ -24,7 +24,7 @@ public class enemyPatrol : EnemyBaseState
             enemyStateMachine.ChangeState(ghostsm.idleState);
         }
 
-        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 10)
+        if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 20)
         {
             enemyStateMachine.ChangeState(ghostsm.chaseState);
         }

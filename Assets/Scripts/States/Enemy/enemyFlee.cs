@@ -18,7 +18,7 @@ public class enemyFlee : EnemyBaseState
     {
         base.UpdateLogic();
 
-        if(ghostsm.power.Powered == false)
+        if (ghostsm.power.Powered == false)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
         }
@@ -28,8 +28,15 @@ public class enemyFlee : EnemyBaseState
     {
         base.UpdatePhysics();
 
-        Vector3 direction = ghostsm.enemy.transform.position - ghostsm.target.transform.position;
+        float distance = Vector3.Distance(ghostsm.enemy.transform.position, ghostsm.target.position);
 
-        ghostsm.agent.destination = ghostsm.enemy.transform.position + direction;
+        if (distance < ghostsm.EnemyDistance)
+        {
+            Vector3 distToPlayer = ghostsm.enemy.transform.position - ghostsm.target.transform.position;
+
+            Vector3 newPos = ghostsm.enemy.transform.position + distToPlayer;
+
+            ghostsm.agent.SetDestination(newPos);
+        }
     }
 }

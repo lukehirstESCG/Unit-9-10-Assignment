@@ -9,6 +9,7 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ScoringSystem.score = ScoringSystem.score + 10;
+            FindFirstObjectByType<AudioManager>().Play("collect");
             Destroy(gameObject);
         }
     }

@@ -651,8 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 7.5, z: -28.03}
+  m_BindingMode: 3
+  m_FollowOffset: {x: 0, y: 9.99, z: -28.03}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1384,7 +1384,7 @@ Transform:
   m_GameObject: {fileID: 145950207}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1279.323, y: -0.15, z: -410.9}
+  m_LocalPosition: {x: -1272.43, y: -0.15, z: -410.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3592,8 +3592,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 950056692}
   highScoreText: {fileID: 960312665}
-  MainUI: {fileID: 0}
-  winScreen: {fileID: 0}
   completed: 0
   complete: {fileID: 419894706}
 --- !u!114 &419894704
@@ -5809,6 +5807,7 @@ MonoBehaviour:
   - {fileID: 4048265581588463377}
   - {fileID: 4427481330656431177}
   - {fileID: 3534657355192316457}
+  EnemyDistance: 35
   agent: {fileID: 800201289}
   dests: 0
   attacking: 0
@@ -6098,6 +6097,7 @@ MonoBehaviour:
   - {fileID: 3899696603917015406}
   - {fileID: 244088434244626826}
   - {fileID: 7722971643186799136}
+  EnemyDistance: 35
   agent: {fileID: 846639666}
   dests: 0
   attacking: 0
@@ -7725,6 +7725,7 @@ MonoBehaviour:
   - {fileID: 1037930473841868164}
   - {fileID: 6772884414300274475}
   - {fileID: 20453114719020740}
+  EnemyDistance: 35
   agent: {fileID: 1062138286}
   dests: 0
   attacking: 0
@@ -11492,6 +11493,63 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &1785190249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 651.5247
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 295.45465
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.028021
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586432330501991445, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406798820041094076, guid: be75a66a0af42504295dade159a114c9, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be75a66a0af42504295dade159a114c9, type: 3}
 --- !u!1 &1787865804
 GameObject:
   m_ObjectHideFlags: 0
@@ -11835,6 +11893,7 @@ MonoBehaviour:
   - {fileID: 7028211913987129983}
   - {fileID: 8030143193184550284}
   - {fileID: 8613986425212482359}
+  EnemyDistance: 35
   agent: {fileID: 1788937851}
   dests: 0
   attacking: 0
@@ -12190,8 +12249,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821449620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09446889, y: 0.6831581, z: -0.089816764, w: 0.71854275}
-  m_LocalPosition: {x: -1448.8741, y: 7.7, z: -289.13736}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
+  m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12264,8 +12323,8 @@ MonoBehaviour:
   m_Strategy: 1
   m_MaximumEffort: 4
   m_SmoothingTime: 0
-  m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_Damping: 3
+  m_DampingWhenOccluded: 3
   m_OptimalTargetDistance: 0
 --- !u!1 &1829321231
 GameObject:
@@ -13967,7 +14026,7 @@ Transform:
   m_GameObject: {fileID: 2063419873}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1547.2, y: -0.15, z: -413}
+  m_LocalPosition: {x: -1556.4, y: -0.15, z: -413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14049,21 +14108,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &103213923078665905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984724817728090033}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 651.5247, y: 295.45465, z: -15.028021}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &137664794624540724
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14656,8 +14700,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435942501279629557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09446889, y: 0.6831581, z: -0.089816764, w: 0.71854275}
-  m_LocalPosition: {x: -1448.8741, y: 7.7, z: -289.13736}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
+  m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 0.00129056, y: 0.0012905599, z: 0.0012905598}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17708,7 +17752,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 771.91205, y: 442.50302, z: 100.00001}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -17.45, y: 336.726, z: 0}
   m_TimeToStationary: 0.5
@@ -17962,23 +18006,6 @@ GameObject:
   - component: {fileID: 7031590021710056669}
   m_Layer: 0
   m_Name: Cube_019
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &3984724817728090033
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 103213923078665905}
-  - component: {fileID: 4581286997987304672}
-  m_Layer: 0
-  m_Name: AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18609,20 +18636,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4581286997987304672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3984724817728090033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aded5de786a7ec4cab0167da264e3a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  master: {fileID: 24100000, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
-  sounds: []
 --- !u!23 &4585328617071506218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25701,7 +25714,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 878714073336676184}
   - {fileID: 743822139}
-  - {fileID: 103213923078665905}
+  - {fileID: 1785190249}
   - {fileID: 310642565}
   - {fileID: 419894699}
   - {fileID: 979377790}
