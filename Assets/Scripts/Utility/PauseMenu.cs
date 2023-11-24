@@ -35,6 +35,11 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("FrontEnd");
     }
 
+    public void DeleteHighScore()
+    {
+        PlayerPrefs.DeleteKey("high_score");
+    }
+
     public void OnApplicationQuit()
     {
         Application.Quit();

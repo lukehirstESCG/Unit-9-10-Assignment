@@ -8,8 +8,11 @@ public class ScoringSystem : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
+    public GameObject MainUI;
+    public GameObject winScreen;
     public static int score = 0;
     public static int high_score;
+    public bool completed = false;
     public CompletedGame complete;
 
     public void Start()
@@ -22,12 +25,14 @@ public class ScoringSystem : MonoBehaviour
         else
         {
             high_score = 0;
+            completed = false;
         }
     }
 
     void Update()
     {
         UpdateScore();
+        Score();
     }
 
     void UpdateScore()
@@ -43,9 +48,10 @@ public class ScoringSystem : MonoBehaviour
 
     public void Score()
     {
-        if (scoreText.text == "50")
+        if (score >= 650 && completed == false)
         {
             Complete();
+            completed = true;
         }
     }
 
@@ -56,7 +62,6 @@ public class ScoringSystem : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        PlayerPrefs.SetInt("high_score", high_score);
         Application.Quit();
     }
 }

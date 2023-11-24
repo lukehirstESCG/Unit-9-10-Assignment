@@ -29,5 +29,7 @@ public class enemyFlee : EnemyBaseState
         base.UpdatePhysics();
 
         Vector3 direction = ghostsm.enemy.transform.position - ghostsm.target.transform.position;
+
+        ghostsm.agent.destination = ghostsm.enemy.transform.position + direction;
     }
 }

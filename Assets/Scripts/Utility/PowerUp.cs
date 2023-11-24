@@ -11,6 +11,7 @@ public class PowerUp : MonoBehaviour
         {
             Destroy(gameObject);
             power.CheckForPower();
+            ScoringSystem.score = ScoringSystem.score += 50;
         }
     }
 }

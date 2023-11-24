@@ -30,15 +30,10 @@ public class CompletedGame : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void SaveScore()
+    public void GoToMainMenu()
     {
         PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
         PlayerPrefs.DeleteKey("Lives");
-    }
-
-    public void OnApplicationQuit()
-    {
-        Application.Quit();
-        PlayerPrefs.DeleteKey("Lives");
+        SceneManager.LoadScene("FrontEnd");
     }
 }
