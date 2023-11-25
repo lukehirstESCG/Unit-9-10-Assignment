@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public float protectedTime = 1;
     public float livesCount = 5;
     public float maxHealth;
-    public float deathLength;
+    public float deathLength = 1;
     public bool Protected = false;
     public Image healthBar;
     public TextMeshProUGUI lives;
@@ -56,11 +56,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    IEnumerator Death()
+    public IEnumerator Death()
     {
         Destroy(GameObject.Find("Pacman"));
         FindFirstObjectByType<AudioManager>().Play("dead");
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(deathLength);
         SceneManager.LoadScene("Game");
     }
 

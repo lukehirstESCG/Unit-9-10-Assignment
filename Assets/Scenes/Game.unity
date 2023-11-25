@@ -3536,6 +3536,7 @@ GameObject:
   - component: {fileID: 419894705}
   - component: {fileID: 419894706}
   - component: {fileID: 419894707}
+  - component: {fileID: 419894708}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3621,7 +3622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: {fileID: 229908234}
   MainUI: {fileID: 1661564939}
-  pHealth: {fileID: 1567536178}
+  pHealth: {fileID: 419894708}
 --- !u!114 &419894705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3665,9 +3666,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Protected: 0
   Powered: 0
-  speed: 100
   Pacman: {fileID: 1567536173}
   powerTimer: 10
+--- !u!114 &419894708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419894698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31220b8cf91268647985b604c2882bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  protectedTime: 1
+  livesCount: 5
+  maxHealth: 100
+  deathLength: 15
+  Protected: 0
+  healthBar: {fileID: 1753292297}
+  lives: {fileID: 35067049}
+  healthText: {fileID: 1735950909}
+  over: {fileID: 419894704}
+  Pacman: {fileID: 1567536173}
 --- !u!1 &421994821
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,7 +6062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
-  pHealth: {fileID: 1567536178}
+  pHealth: {fileID: 0}
   power: {fileID: 419894707}
   damage: 20
   enemy: {fileID: 800201292}
@@ -6328,7 +6351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
-  pHealth: {fileID: 1567536178}
+  pHealth: {fileID: 0}
   power: {fileID: 419894707}
   damage: 20
   enemy: {fileID: 846639670}
@@ -7960,7 +7983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
-  pHealth: {fileID: 1567536178}
+  pHealth: {fileID: 0}
   power: {fileID: 419894707}
   damage: 20
   enemy: {fileID: 1062138289}
@@ -10667,29 +10690,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff01fcabcdacfef419b6f7d0fc736782, type: 3}
   m_PrefabInstance: {fileID: 1819452487}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1567536178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567536173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31220b8cf91268647985b604c2882bbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  protectedTime: 1
-  livesCount: 5
-  maxHealth: 100
-  deathLength: 15
-  Protected: 0
-  healthBar: {fileID: 1753292297}
-  lives: {fileID: 35067049}
-  healthText: {fileID: 1735950909}
-  over: {fileID: 419894704}
-  Pacman: {fileID: 1567536173}
 --- !u!1001 &1572273545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12139,7 +12139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1567536177}
-  pHealth: {fileID: 1567536178}
+  pHealth: {fileID: 0}
   power: {fileID: 419894707}
   damage: 20
   enemy: {fileID: 1788937855}
@@ -12486,9 +12486,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ff01fcabcdacfef419b6f7d0fc736782, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1567536174}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ff01fcabcdacfef419b6f7d0fc736782, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1567536178}
     - targetCorrespondingSourceObject: {fileID: 9157943139577863650, guid: ff01fcabcdacfef419b6f7d0fc736782, type: 3}
       insertIndex: -1
       addedObject: {fileID: 504410458}
@@ -12519,7 +12516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821449620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12345676, y: 0.67896587, z: -0.11737716, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14970,7 +14967,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435942501279629557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12345676, y: 0.67896587, z: -0.11737716, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 0.00129056, y: 0.0012905599, z: 0.0012905598}
   m_ConstrainProportionsScale: 0
