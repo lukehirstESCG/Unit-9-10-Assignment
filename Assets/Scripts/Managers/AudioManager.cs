@@ -4,8 +4,10 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance;
+    public static AudioManager manager;
     public AudioMixer master;
+    public AudioMixerGroup musicGroup;
+    public AudioMixerGroup sfxGroup;
     public Sound[] sounds;
 
     public const string MUSIC_KEY = "MusicVol";
@@ -13,13 +15,13 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null)
+        if (AudioManager.manager == null)
         {
-            instance = this;
+            AudioManager.manager = this;
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(this);
             return;
         }
         DontDestroyOnLoad(gameObject);
@@ -30,6 +32,7 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
+            s.source.outputAudioMixerGroup = s.group;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;

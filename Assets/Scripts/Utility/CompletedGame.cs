@@ -13,7 +13,6 @@ public class CompletedGame : MonoBehaviour
     void Start()
     {
         winScreen.SetActive(false);
-        mainUI.SetActive(true);
     }
 
     public void GameComplete()
@@ -25,14 +24,12 @@ public class CompletedGame : MonoBehaviour
 
     public void PlayAgain()
     {
-        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
         PlayerPrefs.DeleteKey("Lives");
         SceneManager.LoadScene("Game");
     }
 
     public void GoToMainMenu()
     {
-        PlayerPrefs.SetInt("high_score", ScoringSystem.high_score);
         PlayerPrefs.DeleteKey("Lives");
         SceneManager.LoadScene("FrontEnd");
     }

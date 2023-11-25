@@ -31,6 +31,7 @@ public class ScoringSystem : MonoBehaviour
     {
         UpdateScore();
         Score();
+        CheckForScore();
     }
 
     void UpdateScore()
@@ -53,10 +54,22 @@ public class ScoringSystem : MonoBehaviour
         }
     }
 
+    public void CheckForScore()
+    {
+        if (PlayerPrefs.HasKey("high_score"))
+        {
+            high_score = PlayerPrefs.GetInt("high_score");
+        }
+        else
+        {
+            high_score = 0;
+        }    
+    }
+
     public void Complete()
     {
         complete.GameComplete();
-        FindFirstObjectByType<AudioManager>().Play("winner");
+        AudioManager.manager.Play("winner");
     }
 
     private void OnApplicationQuit()
