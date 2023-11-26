@@ -47,7 +47,7 @@ public class ScoringSystem : MonoBehaviour
 
     public void Score()
     {
-        if (score >= 650 && completed == false)
+        if (score >= 100 && completed == false)
         {
             Complete();
             completed = true;

@@ -58,8 +58,8 @@ public class PlayerHealth : MonoBehaviour
 
     public IEnumerator Death()
     {
-        Destroy(GameObject.Find("Pacman"));
-        FindFirstObjectByType<AudioManager>().Play("dead");
+        Destroy(Pacman);
+        AudioManager.manager.Play("dead");
         yield return new WaitForSeconds(deathLength);
         SceneManager.LoadScene("Game");
     }
@@ -82,7 +82,7 @@ public class PlayerHealth : MonoBehaviour
         if (livesCount <= 0)
         {
             Dead();
-            FindFirstObjectByType<AudioManager>().Play("dead");
+            AudioManager.manager.Play("dead");
         }
     }
 
