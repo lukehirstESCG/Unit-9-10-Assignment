@@ -49,7 +49,7 @@ MonoBehaviour:
   sfxGroup: {fileID: -7758460608840694442, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
   sounds:
   - name: walk
-    clip: {fileID: 8300000, guid: 21d8cb92a7de88646bf6153af2ef6f55, type: 3}
+    clip: {fileID: 0}
     group: {fileID: -7758460608840694442, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
     loop: 1
     volume: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: dead
-    clip: {fileID: 8300000, guid: 21d8cb92a7de88646bf6153af2ef6f55, type: 3}
+    clip: {fileID: 0}
     group: {fileID: -7758460608840694442, guid: a4e9bd8e982e7e544a90fba0de452631, type: 2}
     loop: 0
     volume: 1
