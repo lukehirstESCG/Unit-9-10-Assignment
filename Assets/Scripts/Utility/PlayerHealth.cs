@@ -1,6 +1,4 @@
 using System.Collections;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -11,7 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public float health = 100;
     public float protectedTime = 1;
     public float livesCount = 5;
-    public float maxHealth;
+    public float maxHealth = 100;
+    public float damage = 20;
     public float deathLength = 1;
     public bool Protected = false;
     public Image healthBar;
@@ -47,7 +46,6 @@ public class PlayerHealth : MonoBehaviour
             health -= damage;
             StartCoroutine(DamageCooldown());
             healthText.text = "Health: " + health;
-            Debug.Log("OW!");
         }
         if (health <= 0)
         {
@@ -62,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
         AudioManager.manager.Play("dead");
         yield return new WaitForSeconds(deathLength);
         SceneManager.LoadScene("Game");
+        AudioManager.manager.Stop("dead");
     }
 
     IEnumerator DamageCooldown()

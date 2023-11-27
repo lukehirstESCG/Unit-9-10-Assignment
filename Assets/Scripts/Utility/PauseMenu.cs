@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("FrontEnd");
+        PlayerPrefs.DeleteKey("Lives");
     }
 
     public void DeleteHighScore()

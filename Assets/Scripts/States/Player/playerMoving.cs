@@ -23,7 +23,6 @@ public class playerWalk : PlayerBaseState
     public override void UpdateLogic()
     {
         base.UpdateLogic();
-        playsm.speed = 1500;
 
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;
@@ -41,6 +40,8 @@ public class playerWalk : PlayerBaseState
 
     public override void UpdatePhysics()
     {
+        playsm.speed = 350;
+
         base.UpdatePhysics();
 
         playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
