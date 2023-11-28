@@ -21,11 +21,13 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        // Does the PlayerPrefs contain the lives key?
         if (PlayerPrefs.HasKey("Lives"))
         {
             livesCount = PlayerPrefs.GetFloat("Lives", livesCount);
         }
         else
+        // Set the default lives
         {
             livesCount = 5;
         }
@@ -41,12 +43,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        // Is the player NOT protected?
         if (!Protected)
         {
             health -= damage;
             StartCoroutine(DamageCooldown());
             healthText.text = "Health: " + health;
         }
+        // Has the player run out of health?
         if (health <= 0)
         {
             RemoveLife();
@@ -54,6 +58,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // Dead
     public IEnumerator Death()
     {
         Destroy(Pacman);
@@ -63,6 +68,7 @@ public class PlayerHealth : MonoBehaviour
         AudioManager.manager.Stop("dead");
     }
 
+    // Protects the player for 1 second.
     IEnumerator DamageCooldown()
     {
         Protected = true;
@@ -70,6 +76,7 @@ public class PlayerHealth : MonoBehaviour
         Protected = false;
     }
 
+    // Player has died once, lose a life.
     public void RemoveLife()
     {
         livesCount -= 1;
@@ -78,6 +85,7 @@ public class PlayerHealth : MonoBehaviour
         ScoringSystem.score = 0;
         lives.text = "Lives: " + livesCount;
         healthText.text = "Health: " + health;
+        // Has the player run out of lives?
         if (livesCount <= 0)
         {
             Dead();
@@ -85,6 +93,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // Player ran out of lives.
     public void Dead()
     {
         over.Dead();

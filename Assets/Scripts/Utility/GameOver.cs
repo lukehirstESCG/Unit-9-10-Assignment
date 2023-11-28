@@ -15,6 +15,7 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    // Player is dead, and ran out of lives.
     public void Dead()
     {
         gameOver.SetActive(true);
@@ -22,6 +23,7 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    // Reload the game, but delete the Lives PlayerPrefs.
     public void SaveScore()
     {
         PlayerPrefs.DeleteKey("Lives");

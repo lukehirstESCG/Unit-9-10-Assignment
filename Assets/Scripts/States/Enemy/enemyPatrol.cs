@@ -19,16 +19,19 @@ public class enemyPatrol : EnemyBaseState
     {
         base.UpdateLogic();
 
+        // Is the player more than 128 metres away?
         if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) > 128)
         {
             enemyStateMachine.ChangeState(ghostsm.idleState);
         }
 
+        // Is the player less than or equal to 20 metres away?
         if (Vector3.Distance(ghostsm.target.position, ghostsm.enemy.transform.position) <= 20)
         {
             enemyStateMachine.ChangeState(ghostsm.chaseState);
         }
 
+        // Has the player got a power-up active?
         if (ghostsm.power.Powered == true)
         {
             enemyStateMachine.ChangeState(ghostsm.fleeState);
@@ -39,6 +42,7 @@ public class enemyPatrol : EnemyBaseState
     {
         base.UpdatePhysics();
 
+        // Is there a path NOT pending?
         if (!ghostsm.agent.pathPending && ghostsm.agent.remainingDistance < 0.5)
         {
             GoToNextPoint();
@@ -46,6 +50,7 @@ public class enemyPatrol : EnemyBaseState
 
         void GoToNextPoint()
         {
+            // End of path.
             if (ghostsm.points.Length == 0)
             {
                 return;

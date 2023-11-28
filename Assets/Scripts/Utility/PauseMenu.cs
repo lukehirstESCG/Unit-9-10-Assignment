@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
+    // Pause the game
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
     }
 
+    // Resume the game
     public void ResumeGame()
     {
         MainUI.SetActive(true);
@@ -35,12 +38,14 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
+    // Go to Main Menu
     public void MainMenu()
     {
         SceneManager.LoadScene("FrontEnd");
         PlayerPrefs.DeleteKey("Lives");
     }
 
+    // Delete the high score
     public void DeleteHighScore()
     {
         PlayerPrefs.DeleteKey("high_score");

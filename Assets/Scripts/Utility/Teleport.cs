@@ -13,24 +13,29 @@ public class Teleport : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // Has the player collided with the teleporter?
         if (other.CompareTag("Player"))
         {
             target.transform.position = teleportTarget.transform.position;
             FindFirstObjectByType<AudioManager>().Play("teleport");
         }
-        if (other.CompareTag("Inky"))
+        // Blinky collided?
+        else if (other.CompareTag("Inky"))
         {
             Inky.transform.position = teleportTarget.transform.position;
         }
-        if (other.CompareTag("Pinky"))
+        // Pinky collided?
+        else if (other.CompareTag("Pinky"))
         {
             Pinky.transform.position = teleportTarget.transform.position;
         }
-        if (other.CompareTag("Blinky"))
+        // Blinky collided?
+        else if (other.CompareTag("Blinky"))
         {
             Blinky.transform.position = teleportTarget.transform.position;
         }
-        if (other.CompareTag("Clyde"))
+        // Clyde collided?
+        else if (other.CompareTag("Clyde"))
         {
             Clyde.transform.position = teleportTarget.transform.position;
         }

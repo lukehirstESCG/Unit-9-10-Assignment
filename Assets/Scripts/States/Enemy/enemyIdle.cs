@@ -18,6 +18,7 @@ public class enemyIdle : EnemyBaseState
     {
         base.UpdateLogic();
 
+        // Is the player less than or equal to 128 metres away?
         if (Vector3.Distance(ghostsm.enemy.transform.position, ghostsm.target.position) <= 128)
         {
             enemyStateMachine.ChangeState(ghostsm.patrolState);
