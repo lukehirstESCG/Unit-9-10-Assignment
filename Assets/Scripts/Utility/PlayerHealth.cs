@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float health = 100;
     public float protectedTime = 1;
-    public float livesCount = 5;
+    public float livesCount;
     public float maxHealth = 100;
     public float damage = 20;
     public float deathLength = 1;
@@ -26,11 +26,7 @@ public class PlayerHealth : MonoBehaviour
         {
             livesCount = PlayerPrefs.GetFloat("Lives", livesCount);
         }
-        else
-        // Set the default lives
-        {
-            livesCount = 5;
-        }
+
         lives.text = "Lives: " + livesCount;
         maxHealth = health;
     }

@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1468949560}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &44024494
@@ -1054,7 +1054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 16.846375, y: -0.120601654}
+  m_AnchoredPosition: {x: 16.846436, y: -0.120601654}
   m_SizeDelta: {x: 53.6928, y: -43.1893}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88688153
@@ -3110,7 +3110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -8.094116, y: -302.4878}
+  m_AnchoredPosition: {x: -8.093994, y: -302.4878}
   m_SizeDelta: {x: -493.35388, y: 98.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &332616420
@@ -3176,11 +3176,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &333775689 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3881087803549984437, guid: ec536a7718376554185e4a856d5ae230, type: 3}
-  m_PrefabInstance: {fileID: 1845628996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &360912011
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,7 +4007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 333775689}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &504410455 stripped
@@ -4285,7 +4280,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19.90802, y: -2.3818}
+  m_AnchoredPosition: {x: 19.908203, y: -2.3817978}
   m_SizeDelta: {x: 59.816, y: -57.6287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527694925
@@ -4391,7 +4386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 333775689}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1001 &560803884
@@ -4563,7 +4558,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
   m_PrefabInstance: {fileID: 1845628996}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333775689}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42844a4fccbd54746b90cade4ff70f73, type: 3}
@@ -7850,7 +7845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1010679573}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &1010679573
@@ -8705,8 +8700,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 72968722201136266}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+      - m_Target: {fileID: 4376196285440320901}
+        m_TargetAssemblyTypeName: ScoringSystem, Assembly-CSharp
         m_MethodName: DeleteHighScore
         m_Mode: 1
         m_Arguments:
@@ -9257,7 +9252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 799920672}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &1313572361
@@ -9868,7 +9863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 333775689}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1001 &1416980365
@@ -9969,7 +9964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.999939, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1425251860
@@ -10037,7 +10032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 82917221}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &1451763644
@@ -10185,7 +10180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 82917221}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1 &1468949560
@@ -12682,7 +12677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821449620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456776, y: 0.67896587, z: -0.11737717, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15166,7 +15161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435942501279629557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456776, y: 0.67896587, z: -0.11737717, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 0.00129056, y: 0.0012905599, z: 0.0012905598}
   m_ConstrainProportionsScale: 0

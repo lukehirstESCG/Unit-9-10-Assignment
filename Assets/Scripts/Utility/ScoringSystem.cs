@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour
 {
@@ -48,7 +45,7 @@ public class ScoringSystem : MonoBehaviour
         highScoreText.text = "High Score: " + high_score;
     }
 
-    // Handles the score check system/
+    // Handles the score check system.
     public void Score()
     {
         if (score >= 650 && completed == false)
@@ -64,11 +61,20 @@ public class ScoringSystem : MonoBehaviour
         if (PlayerPrefs.HasKey("high_score"))
         {
             high_score = PlayerPrefs.GetInt("high_score");
+            highScoreText.text = "High Score: " + high_score;
         }
         else
         {
             high_score = 0;
         }    
+    }
+
+    // Deletes the high score.
+    public void DeleteHighScore()
+    {
+        PlayerPrefs.DeleteKey("high_score");
+        high_score = 0;
+        highScoreText.text = "High Score: " + high_score;
     }
 
     // Completed the game.

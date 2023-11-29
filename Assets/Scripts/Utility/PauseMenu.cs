@@ -45,12 +45,6 @@ public class PauseMenu : MonoBehaviour
         PlayerPrefs.DeleteKey("Lives");
     }
 
-    // Delete the high score
-    public void DeleteHighScore()
-    {
-        PlayerPrefs.DeleteKey("high_score");
-    }
-
     public void OnApplicationQuit()
     {
         Application.Quit();
