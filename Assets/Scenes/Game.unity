@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_ReferenceResolution: {x: 1080, y: 2280}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
+  m_PhysicalUnit: 2
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
@@ -2842,7 +2842,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -9964,7 +9964,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -4.999939, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1425251860
@@ -12677,7 +12677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821449620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.123456776, y: 0.67896587, z: -0.11737717, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12706,7 +12706,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 1567536177}
   m_Follow: {fileID: 1567536177}
   m_Lens:
-    FieldOfView: 42.474243
+    FieldOfView: 61.324047
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -13879,7 +13879,7 @@ GameObject:
   - component: {fileID: 1993422881}
   - component: {fileID: 1993422880}
   m_Layer: 0
-  m_Name: Directional Light.1
+  m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13896,8 +13896,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
-  m_Intensity: 0.8
+  m_Color: {r: 1, g: 0.9698857, b: 0, a: 1}
+  m_Intensity: 1.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -13955,13 +13955,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993422879}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7048295, y: 0.29268616, z: -0.49078214, w: 0.42033684}
-  m_LocalPosition: {x: -779.54, y: 17.7, z: 70.46591}
+  m_LocalRotation: {x: 0.739309, y: 0.1893989, z: -0.54560715, w: 0.34621248}
+  m_LocalPosition: {x: -779.54, y: 301, z: -984}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -241.621, y: -290.3, z: 0}
+  m_LocalEulerAnglesHint: {x: -225.938, y: -283.716, z: 8.080002}
 --- !u!1001 &1995007518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15161,7 +15161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435942501279629557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.123456776, y: 0.67896587, z: -0.11737717, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 0.00129056, y: 0.0012905599, z: 0.0012905598}
   m_ConstrainProportionsScale: 0
@@ -22224,7 +22224,7 @@ Camera:
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 20
+  m_FocalLength: 13.11
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -22239,7 +22239,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 42.474243
+  field of view: 61.324047
   orthographic: 0
   orthographic size: 10
   m_Depth: 0
