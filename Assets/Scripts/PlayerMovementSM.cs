@@ -11,6 +11,7 @@ public class PlayerMovementSM : PlayerStateMachine
     public Animator anim;
     public Vector3 direction;
     public Vector3 rotation;
+    public bool Started = false;
 
     [HideInInspector]
     public playerIdle idleState;

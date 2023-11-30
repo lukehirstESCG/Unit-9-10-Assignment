@@ -31,7 +31,7 @@ public class playerIdle : PlayerBaseState
         magnitude = direction.magnitude;
         magnitude = Mathf.Clamp01(magnitude);
 
-        if (direction.magnitude > 0.01f)
+        if (direction.magnitude > 0.01f && playsm.Started == true)
         {
             playerStateMachine.ChangeState(playsm.movingState);
             AudioManager.manager.Play("walk");

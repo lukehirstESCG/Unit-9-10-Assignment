@@ -40,7 +40,7 @@ public class playerWalk : PlayerBaseState
 
     public override void UpdatePhysics()
     {
-        playsm.speed = 1200;
+        playsm.speed = 350;
 
         base.UpdatePhysics();
 
