@@ -5,7 +5,6 @@ public class playerWalk : PlayerBaseState
     float horizontalInput;
     float verticalInput;
     Vector3 direction;
-    float magnitude;
     private PlayerMovementSM playsm;
     public playerWalk(PlayerMovementSM playerStateMachine) : base("Moving", playerStateMachine)
     {
@@ -28,13 +27,13 @@ public class playerWalk : PlayerBaseState
         verticalInput = playsm.joystick.Vertical;
         direction = new Vector3(horizontalInput, 0, verticalInput);
 
-        playsm.speed = 350;
+        playsm.speed = 12;
 
         playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
 
         Vector3 move = new Vector3(0, 0, playsm.joystick.Vertical);
         move = playsm.transform.TransformDirection(move);
-        playsm.control.Move(move * playsm.speed);
+        playsm.control.Move(move * playsm.speed * Time.deltaTime);
         playsm.transform.Rotate(playsm.rotation);
 
         playsm.playerCam.transform.position = playsm.transform.position;
