@@ -8996,7 +8996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 250, y: 564}
+  m_AnchoredPosition: {x: 268, y: 281}
   m_SizeDelta: {x: 442.03577, y: 203.82642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138877449
@@ -12360,7 +12360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 253, y: 285.9132}
+  m_AnchoredPosition: {x: 795, y: 285}
   m_SizeDelta: {x: 442.03577, y: 203.82642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788407563
@@ -12886,7 +12886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821449620}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12345676, y: 0.67896587, z: -0.11737716, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13056,7 +13056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1829535667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13419,7 +13419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 450, y: 1062}
+  m_AnchoredPosition: {x: 450, y: 1129}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856814039
@@ -13442,7 +13442,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Are you sure you want to delete your high score?
+  m_text: 'Are you sure you want to delete your high score?
+
+    You will need to
+    launch the game again!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13505,7 +13508,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -328.75494, y: 0, z: -367.13037, w: -270.61438}
+  m_margin: {x: -328.75494, y: 0, z: -367.13037, w: -561.4932}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15504,7 +15507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435942501279629557}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12345676, y: 0.67896587, z: -0.11737716, w: 0.7141333}
+  m_LocalRotation: {x: 0.123456754, y: 0.67896587, z: -0.11737715, w: 0.7141333}
   m_LocalPosition: {x: -1448.8741, y: 10.19, z: -289.13736}
   m_LocalScale: {x: 0.00129056, y: 0.0012905599, z: 0.0012905598}
   m_ConstrainProportionsScale: 0

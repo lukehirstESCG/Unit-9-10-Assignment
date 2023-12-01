@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoringSystem : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class ScoringSystem : MonoBehaviour
         else
         {
             high_score = 0;
+            score = 0;
             completed = false;
         }
     }
@@ -30,7 +32,6 @@ public class ScoringSystem : MonoBehaviour
     {
         UpdateScore();
         Score();
-        CheckForScore();
     }
 
     // Update the score if it is higher than the high_score
@@ -55,26 +56,25 @@ public class ScoringSystem : MonoBehaviour
         }
     }
 
-    // Check if the high_score has been deleted or not.
-    public void CheckForScore()
-    {
-        if (PlayerPrefs.HasKey("high_score"))
-        {
-            high_score = PlayerPrefs.GetInt("high_score");
-            highScoreText.text = "High Score: " + high_score;
-        }
-        else
-        {
-            high_score = 0;
-        }    
-    }
+    //// Check if the high_score has been deleted or not.
+    //public void CheckForScore()
+    //{
+    //    if (PlayerPrefs.HasKey("high_score"))
+    //    {
+    //        high_score = PlayerPrefs.GetInt("high_score");
+    //        highScoreText.text = "High Score: " + high_score;
+    //    }
+    //    else
+    //    {
+    //        high_score = 0;
+    //    }    
+    //}
 
     // Deletes the high score.
     public void DeleteHighScore()
     {
         PlayerPrefs.DeleteKey("high_score");
-        high_score = 0;
-        highScoreText.text = "High Score: " + high_score;
+        SceneManager.LoadScene("FrontEnd");
     }
 
     // Completed the game.
@@ -82,10 +82,5 @@ public class ScoringSystem : MonoBehaviour
     {
         complete.GameComplete();
         AudioManager.manager.Play("winner");
-    }
-
-    private void OnApplicationQuit()
-    {
-        Application.Quit();
     }
 }
