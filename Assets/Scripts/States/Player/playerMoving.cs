@@ -27,8 +27,18 @@ public class playerWalk : PlayerBaseState
         horizontalInput = playsm.joystick.Horizontal;
         verticalInput = playsm.joystick.Vertical;
         direction = new Vector3(horizontalInput, 0, verticalInput);
-        magnitude = direction.magnitude;
-        magnitude = Mathf.Clamp01(magnitude);
+
+        playsm.speed = 350;
+
+        playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
+
+        Vector3 move = new Vector3(0, 0, playsm.joystick.Vertical);
+        move = playsm.transform.TransformDirection(move);
+        playsm.control.Move(move * playsm.speed);
+        playsm.transform.Rotate(playsm.rotation);
+
+        playsm.playerCam.transform.position = playsm.transform.position;
+        playsm.playerCam.rotation = playsm.player.rotation;
 
         if (direction.magnitude < 0.01f)
         {
@@ -40,18 +50,6 @@ public class playerWalk : PlayerBaseState
 
     public override void UpdatePhysics()
     {
-        playsm.speed = 350;
-
         base.UpdatePhysics();
-
-        playsm.rotation = new Vector3(0, playsm.joystick.Horizontal * playsm.rotationSpeed * Time.deltaTime, 0);
-
-        Vector3 move = new Vector3(0, 0, playsm.joystick.Vertical * Time.deltaTime);
-        move = playsm.transform.TransformDirection(move);
-        playsm.control.Move(move * magnitude * playsm.speed * Time.deltaTime);
-        playsm.transform.Rotate(playsm.rotation);
-
-        playsm.playerCam.transform.position = playsm.transform.position;
-        playsm.playerCam.rotation = playsm.player.rotation;
     }
 }

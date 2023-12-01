@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI healthText;
     public GameOver over;
     public GameObject Pacman;
+    public GameObject MainUI;
 
     private void Start()
     {
@@ -58,6 +59,7 @@ public class PlayerHealth : MonoBehaviour
     public IEnumerator Death()
     {
         Destroy(Pacman);
+        MainUI.SetActive(false);
         AudioManager.manager.Play("dead");
         yield return new WaitForSeconds(deathLength);
         SceneManager.LoadScene("Game");
