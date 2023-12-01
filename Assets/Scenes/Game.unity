@@ -2539,10 +2539,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 2063419874}
   target: {fileID: 1567536173}
-  Inky: {fileID: 0}
-  Clyde: {fileID: 0}
-  Blinky: {fileID: 0}
-  Pinky: {fileID: 0}
+  Inky: {fileID: 1788937850}
+  Clyde: {fileID: 1062138284}
+  Blinky: {fileID: 846639665}
+  Pinky: {fileID: 800201287}
 --- !u!23 &254386796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14078,10 +14078,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 145950208}
   target: {fileID: 1567536173}
-  Inky: {fileID: 0}
-  Clyde: {fileID: 0}
-  Blinky: {fileID: 0}
-  Pinky: {fileID: 0}
+  Inky: {fileID: 1788937850}
+  Clyde: {fileID: 1062138284}
+  Blinky: {fileID: 846639665}
+  Pinky: {fileID: 800201287}
 --- !u!23 &1895154991
 MeshRenderer:
   m_ObjectHideFlags: 0
